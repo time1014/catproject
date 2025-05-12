@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- 월 표시 -->
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="January 2025"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+    <!-- 이전/다음 달 이동 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◀ 이전 달"/>
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음 달 ▶"/>
+    </LinearLayout>
+
+    <!-- 달력 GridView -->
+    <GridView
+        android:id="@+id/gv_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="301dp"
+        android:horizontalSpacing="8dp"
+        android:numColumns="7"
+        android:verticalSpacing="8dp" />
+</LinearLayout>
